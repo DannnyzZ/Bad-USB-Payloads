@@ -93,7 +93,7 @@ ENTER
 The technical intent of this script is to cause a denial of service (DoS) condition by exhausting the target system's CPU, making it unresponsive and potentially leading to system instability. This type of attack is disruptive and can cause significant disruption to the target system's operation.
 
 ```sh
-REM Title: Bad USB - Processor Exhaustion
+REM Title: Bad USB - DoS - processor exhaustion
 REM Author: DannnyzZ
 REM Date: 10.15.2023
 REM Description: Opens commandline, then executes PC stress test.
@@ -122,7 +122,7 @@ ENTER
 This script is a malicious payload designed to harvest login credentials from the target system using Mimikatz. The script delivers Mimikatz via BITSAdmin and then runs it to capture login passwords and save them to a file.
 
 ```sh
-REM Title: Bad USB - Mimikatz via bitsadmin
+REM Title: Bad USB - Mimikatz payload delivered by BITSAdmin
 REM Author: DannnyzZ
 REM Date: 10.15.2023
 REM Description: MIMIKATZ drop credentials on desktop
