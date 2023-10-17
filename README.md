@@ -25,7 +25,7 @@
 - [📍 Overview](#-overview)
 - [⚙️ Features](#️-features)
 - [👾 List of Bad USB scripts](#-list-of-Bad-USB-scripts)
-  - [1. winPEAS payload delivered by curl](#winpeas-payload-delivered-by-curl)
+  - [1️⃣ winPEAS payload delivered by curl](#winpeas-payload-delivered-by-curl)
   - [2️⃣ DoS - processor exhaustion](#️-DoS---processor-exhaustion)
   - [3️⃣ Mimikatz payload delivered by BITSAdmin](#️-Mimikatz-payload-delivered-by-BITSAdmin)
 - [🚀 Getting Started](#-getting-started)
@@ -54,7 +54,7 @@
 
 ## 👾 List of Bad USB scripts
 
-### 1. winPEAS payload delivered by curl
+### 1️⃣ winPEAS payload delivered by curl
 
 This script performs the delivery and execution of a potentially malicious file (winPEAS.exe) from a remote location. Its intent, is to open a Command Line on a target Windows system and then fetch via curl and run a payload from a specified URL.
 
