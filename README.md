@@ -25,7 +25,7 @@
 - [📍 Overview](#-overview)
 - [⚙️ Features](#️-features)
 - [👾 List of Bad USB scripts](#-list-of-Bad-USB-scripts)
-  - [1️⃣ winPEAS payload delivered by curl](#️-winPEAS-payload-delivered-by-curl)
+  - [1. winPEAS payload delivered by curl](#winpeas-payload-delivered-by-curl)
   - [2️⃣ DoS - processor exhaustion](#️-DoS---processor-exhaustion)
   - [3️⃣ Mimikatz payload delivered by BITSAdmin](#️-Mimikatz-payload-delivered-by-BITSAdmin)
 - [🚀 Getting Started](#-getting-started)
