@@ -1,12 +1,13 @@
 
-
+# P A Y L O A D S
 <div align="center">
-<h1 align="center">
-<img src="https://github.com/DannnyzZ/CipherPurge/blob/main/CipherPurge_logo_wide.png?raw=true" >
-<br>
-</h1>
-<p align="center">
-</p>
+  <h1 align="center">
+    <img src="https://github.com/DannnyzZ/Payloads/blob/main/payload_graphics.png?raw=true" alt="Payload" width="70%" height="70%" />
+  </h1>
+</div>
+
+
+
  
 <p align="center">
   <img src="https://img.shields.io/badge/Batch-Script-brightgreen.svg?style=for-the-badge&logo=Windows&logoColor=white" alt="Batch" />
