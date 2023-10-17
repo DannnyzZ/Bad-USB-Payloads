@@ -2,7 +2,7 @@
 # P A Y L O A D S
 <div align="center">
   <h1 align="center">
-    <img src="https://github.com/DannnyzZ/Payloads/blob/main/payload_graphics.png?raw=true" alt="Payload" style="width: 66%; display: block; margin: 0 auto;" />
+    <img src="https://github.com/DannnyzZ/Payloads/blob/main/payload.jpg" alt="Payload" style="width: 66%; display: block; margin: 0 auto;" />
   </h1>
 </div>
 
