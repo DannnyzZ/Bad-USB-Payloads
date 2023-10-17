@@ -54,7 +54,7 @@
 
 ## 👾 List of Bad USB scripts
 
-### 1️⃣ winPEAS payload delivered by curl
+### 1. winPEAS payload delivered by curl
 
 This script performs the delivery and execution of a potentially malicious file (winPEAS.exe) from a remote location. Its intent, is to open a Command Line on a target Windows system and then fetch via curl and run a payload from a specified URL.
 
