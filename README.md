@@ -1,5 +1,6 @@
-
-# P A Y L O A D S
+<div style="display: flex; justify-content: center;">
+  <h1>P A Y L O A D S</h1>
+</div>
 <div align="center">
   <h1 align="center">
     <img src="https://github.com/DannnyzZ/Payloads/blob/main/payload.jpg" alt="Payload" style="width: 66%; display: block; margin: 0 auto;" />
@@ -14,6 +15,7 @@
   <img src="https://img.shields.io/badge/Payload-Content-orange.svg?style=for-the-badge&logo=file&logoColor=white" alt="Payload" />
 </p>
 
+*Welcome to the Payloads repository, your go-to source for a collection of payloads designed for Bad USB attacks and more. Whether you're interested in testing security measures, learning about USB-based attacks, or conducting ethical hacking experiments, this repository offers a curated selection of payloads to meet your needs.*
 
 </div>
 
