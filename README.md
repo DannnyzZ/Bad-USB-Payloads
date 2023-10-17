@@ -24,7 +24,6 @@
 - [📒 Table of Contents](#-table-of-contents)
 - [📍 Overview](#-overview)
 - [⚙️ Features](#️-features)
-- [🧩 Supported formats](#-supported-formats)
 - [🚀 Getting Started](#-getting-started)
   - [✔️ Prerequisites](#️-prerequisites)
   - [💻 Installation](#-installation)
@@ -41,21 +40,10 @@
 
 ## 📍 Overview
 
-CipherPurge stands as a commanding solution for those seeking robust data protection mechanisms. Merging advanced data wiping, data zeroing, data over AES-256 encryption, data zeroing, and data overwriting capabilities, CipherPurge introduces a powerful and intuitive Tkinter GUI interface for effortless data security management.
 
-**CipherPurge** was created with a singular, paramount purpose: to enhance data security and protect your sensitive information in an increasingly digital and interconnected world.
+***Payload*** represents the core and often malicious component of code or an attack that is responsible for executing specific actions on a target system. These actions can range from gaining unauthorized access, extracting sensitive data, to compromising the integrity of the targeted software or hardware. Payloads are typically designed to exploit vulnerabilities and are delivered via various means, including email attachments, compromised files, or even physical devices such as USB drives. 
 
-In today's landscape of ever-evolving cyber threats and data breaches, ensuring the confidentiality and integrity of your digital assets is of utmost importance. Whether you're an individual seeking to safeguard personal documents or a business striving to protect proprietary information, CipherPurge offers a comprehensive solution. The software's sole purpose is to provide you with a powerful and accessible tool to:
-
-> **Sanitize Data:** CipherPurge ensures that your data is thoroughly sanitized before encryption. By randomizing and zeroing out its contents, it guarantees that no trace of your original data remains.
-
-> **Encrypt Securely:** Employing the AES-256 encryption standard, CipherPurge transforms your files into an unreadable format, adding an additional layer of security to your data.
-
-> **Dispose Safely:** CipherPurge securely disposes of your encrypted files by moving them to the system and user trash. With the option to empty both trash locations, you can be certain that your sensitive files are beyond recovery.
-
-CipherPurge incorporates the principles of **"Defense in Depth**," a cybersecurity strategy that emphasizes multiple layers of protection. This approach ensures that even if one layer is compromised, others remain intact to thwart potential threats. 
-
-By offering military-grade encryption, data randomization, and secure file disposal in a user-friendly interface, CipherPurge empowers individuals and organizations to take control of their data security. 
+***BadUSB*** is a computer security attack using USB devices that are programmed with malicious software.For example, USB flash drives can contain a programmable Intel 8051 microcontroller, which can be reprogrammed, turning a USB flash drive into a malicious device. This attack works by programming the fake USB flash drive to emulate a keyboard, which once plugged into a computer, is automatically recognized and allowed to interact with the computer, and can then initiate a series of keystrokes which open a command window and issue commands to download malware.
 
 
 ---
