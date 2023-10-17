@@ -24,6 +24,7 @@
 - [📒 Table of Contents](#-table-of-contents)
 - [📍 Overview](#-overview)
 - [⚙️ Features](#️-features)
+- [👾 List of Bad USB scripts](#-list-of-Bad-USB-scripts)
 - [🚀 Getting Started](#-getting-started)
   - [✔️ Prerequisites](#️-prerequisites)
   - [💻 Installation](#-installation)
@@ -74,13 +75,10 @@ dddd
 
 ---
 
+## 👾 List of Bad USB scripts
 
 
 ## 🚀 Getting Started
-
-<div align="center">
-  <img src="https://github.com/DannnyzZ/CipherPurge/assets/119814239/92532790-82f3-4133-817f-2400675db24b" alt="gui_screen">
-</div>
 
 
 ### ✔️ Prerequisites
