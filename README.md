@@ -25,9 +25,9 @@
 - [📍 Overview](#-overview)
 - [⚙️ Features](#️-features)
 - [👾 List of Bad USB scripts](#-list-of-Bad-USB-scripts)
-  - [1️⃣ winPEAS payload delivered by curl ](#️-winPEAS-payload-delivered-by-curl)
-  - [2️⃣ DoS - processor exhaustion ](#️-DoS---processor-exhaustion)
-  - [3️⃣ Mimikatz payload delivered by BITSAdmin](#️-Mimikatz-payload-delivered-by-BITSAdmin)
+  - [1️⃣ winPEAS_payload_delivered_by_curl](#️-winPEAS-payload-delivered-by-curl)
+  - [2️⃣ DoS_-_processor_exhaustion](#️-DoS---processor-exhaustion)
+  - [3️⃣ Mimikatz_payload_delivered_by_BITSAdmin](#️-Mimikatz-payload-delivered-by-BITSAdmin)
 - [🚀 Getting Started](#-getting-started)
   - [✔️ Prerequisites](#️-prerequisites)
   - [💻 Installation](#-installation)
@@ -37,6 +37,7 @@
 - [📄 License](#-license)
 - [👏 Acknowledgments](#-acknowledgments)
 
+### 🎮 Generating payloads
 
 
 ---
