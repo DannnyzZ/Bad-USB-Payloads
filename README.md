@@ -28,7 +28,6 @@
   - [1️⃣ winPEAS payload delivered by curl ](#️-winPEAS-payload-delivered-by-curl)
   - [2️⃣ DoS - processor exhaustion ](#️-DoS---processor-exhaustion)
   - [3️⃣ Mimikatz payload delivered by BITSAdmin](#️-Mimikatz-payload-delivered-by-BITSAdmin)
-  - ### 3️⃣ Mimikatz payload delivered by BITSAdmin
 - [🚀 Getting Started](#-getting-started)
   - [✔️ Prerequisites](#️-prerequisites)
   - [💻 Installation](#-installation)
