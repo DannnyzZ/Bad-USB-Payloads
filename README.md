@@ -241,6 +241,9 @@ This project is licensed under the `ℹ️  MIT` License.
   `ℹ️  Ducktoolkit`
    
   `ℹ️  ChatGPT 4.0`
+  
+  `ℹ️  Mimikatz`
 
+  `ℹ️  winPEAS`
 
 ---
